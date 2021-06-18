@@ -167,6 +167,8 @@ return [
         'mobile'    => 'celular',
         'month'     => 'mês',
         'name'      => 'nome',
+        'apelido'   => 'apelido',
+        'nascimento' => 'nascimento',
         'neighborhood' => 'bairro',
         'number'    => 'número',
         'password'  => 'senha',

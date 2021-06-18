@@ -1,5 +1,6 @@
 {
     "Name": "Nome",
+    "Nascimento": "Nascimento",
     "E-Mail Address": "Email",
     "Password": "Senha",
     "Confirm": "Confirmar",
@@ -13,6 +14,8 @@
     "Register": "Registre-se",
     "Home": "Principal",
     "Logout": "Sair",
+    "Editar": "Editar",
+    "Preferencias": "Preferencias do usuário",
     "Toggle navigation": "Alternar navegação",
     "Nevermind": "Deixa pra lá",
     "Verify Your Email Address": "Verifique seu endereço de email",
