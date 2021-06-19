@@ -31,7 +31,7 @@
 
                                 <div class="mb-3">
                                     <h3><label for="tweet" class="form-label">Mensagem</label></h3>
-                                    <textarea name="tweet" id="tweet" cols="100" rows="5" placeholder="Digite aqui a mensagem com até 255 caracteres" maxlength="255" required></textarea>
+                                    <textarea class="form-control" name="tweet" id="tweet" cols="96" rows="5" placeholder="Digite aqui a mensagem com até 255 caracteres" maxlength="255" required></textarea>
                                     @error('tweet')
                                         <div class="alert alert-danger">O campo Mensagem deverá ser informado.</div>
                                     @enderror
@@ -45,6 +45,23 @@
                         </div>
                     </div>
                 </div>
+
+                @foreach ($tweets as $tweet)
+
+                    <div class="card-body">
+                        <div class="row align-items-md-stretch">
+                            <div class="col-md-12">
+                                <div class="h-100 p-5 border rounded-3">
+                                    <h5 class="card-title">{{ $tweet->titulo }}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Postado por {{ $tweet->apelido }} em {{ $tweet->created_at }}</h6>
+
+                                    <p class="card-text">{{ $tweet->tweet }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                @endforeach
             </div>
         </div>
     </div>

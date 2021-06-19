@@ -5,17 +5,23 @@ namespace App\Http\Controllers;
 use App\Http\Requests\TweetRequest;
 use App\Models\Tweet;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+use Illuminate\Support\Facades\Auth;
 
 class TimeLineController extends Controller
 {
+    private $user;
+
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index() : View
     {
-        return view('timeline.index');
+        $tweets = Tweet::buscarTodosTweets(Auth::user()->id);
+
+        return view('timeline.index', compact('tweets'));
     }
 
     public function store(TweetRequest $request)
